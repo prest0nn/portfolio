@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preston — Roblox Game Developer</title>
+    <title>Preston — Game & Web Developer</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -23,9 +23,13 @@
             --line: rgba(255,255,255,.09);
         }
 
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
 
-        html { scroll-behavior: auto; }
+        html {
+            scroll-behavior: auto;
+        }
 
         body {
             margin: 0;
@@ -38,7 +42,9 @@
             overflow-x: hidden;
         }
 
-        a { color: inherit; }
+        a {
+            color: inherit;
+        }
 
         #particles {
             position: fixed;
@@ -80,7 +86,9 @@
             letter-spacing: -.5px;
         }
 
-        .logo span { color: var(--accent); }
+        .logo span {
+            color: var(--accent);
+        }
 
         nav .links {
             display: flex;
@@ -94,7 +102,9 @@
             transition: .2s;
         }
 
-        nav a:hover { color: white; }
+        nav a:hover {
+            color: white;
+        }
 
         section {
             min-height: 100vh;
@@ -130,17 +140,22 @@
             line-height: .9;
             letter-spacing: -6px;
             margin: 0;
-            max-width: 900px;
+            max-width: 1000px;
         }
 
         h1 .gradient {
-            background: linear-gradient(100deg, #fff, #a99aff 45%, #55e4ff);
+            background: linear-gradient(
+                100deg,
+                #fff,
+                #a99aff 45%,
+                #55e4ff
+            );
             -webkit-background-clip: text;
             color: transparent;
         }
 
         .hero p {
-            max-width: 650px;
+            max-width: 720px;
             color: var(--muted);
             font-size: 1.1rem;
             line-height: 1.8;
@@ -170,7 +185,9 @@
             border-color: var(--accent);
         }
 
-        .btn.secondary { background: rgba(255,255,255,.04); }
+        .btn.secondary {
+            background: rgba(255,255,255,.04);
+        }
 
         .btn:hover {
             transform: translateY(-3px);
@@ -194,7 +211,7 @@
 
         .section-subtitle {
             color: var(--muted);
-            max-width: 650px;
+            max-width: 700px;
             line-height: 1.7;
             margin-bottom: 45px;
         }
@@ -207,7 +224,12 @@
 
         .card {
             position: relative;
-            background: linear-gradient(145deg, rgba(21,26,35,.94), rgba(12,15,21,.94));
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(21,26,35,.94),
+                    rgba(12,15,21,.94)
+                );
             border: 1px solid var(--line);
             border-radius: 22px;
             padding: 28px;
@@ -279,6 +301,13 @@
             border-radius: 16px;
             background: rgba(255,255,255,.025);
             text-align: center;
+            transition: .25s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: rgba(124,92,255,.35);
+            background: rgba(124,92,255,.06);
         }
 
         .skill .icon {
@@ -312,10 +341,44 @@
             border-bottom: 1px solid var(--line);
         }
 
-        .stat:last-child { border-bottom: 0; }
+        .stat:last-child {
+            border-bottom: 0;
+        }
 
-        .stat span { color: var(--muted); }
-        .stat strong { color: white; }
+        .stat span {
+            color: var(--muted);
+        }
+
+        .stat strong {
+            color: white;
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 25px;
+        }
+
+        .experience {
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 16px;
+            background: rgba(255,255,255,.025);
+        }
+
+        .experience strong {
+            display: block;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .experience span {
+            color: var(--muted);
+            font-size: .8rem;
+            line-height: 1.5;
+        }
 
         .contact {
             text-align: center;
@@ -340,7 +403,12 @@
             width: 400px;
             height: 400px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(124,92,255,.14), rgba(0,212,255,.05));
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(124,92,255,.14),
+                    rgba(0,212,255,.05)
+                );
             filter: blur(2px);
             right: -170px;
             top: 18%;
@@ -348,409 +416,1041 @@
         }
 
         @media (max-width: 800px) {
-            nav .links { display: none; }
-            h1 { letter-spacing: -3px; }
-            .grid, .about-box { grid-template-columns: 1fr; }
-            .skills { grid-template-columns: repeat(2, 1fr); }
-            section { padding-top: 110px; padding-bottom: 80px; }
+
+            nav .links {
+                display: none;
+            }
+
+            h1 {
+                letter-spacing: -3px;
+            }
+
+            .grid,
+            .about-box {
+                grid-template-columns: 1fr;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding-top: 110px;
+                padding-bottom: 80px;
+            }
         }
 
         @media (max-width: 450px) {
-            .skills { grid-template-columns: 1fr 1fr; }
-            .card { padding: 22px; }
+
+            .skills {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .card {
+                padding: 22px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="particles"></div>
 
-    <nav>
-        <div class="logo">PRESTON<span>.</span></div>
-        <div class="links">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+<div id="particles"></div>
+
+<nav>
+    <div class="logo">
+        PRESTON<span>.</span>
+    </div>
+
+    <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<main>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                GAME DEVELOPER · WEB DEVELOPER · PRESTON
+            </div>
+
+            <h1>
+                I build things<br>
+                that feel <span class="gradient">alive.</span>
+            </h1>
+
+            <p>
+                I'm Preston, a developer focused on Roblox game development,
+                scripting and modern web experiences. I build gameplay systems,
+                UI, automation and interactive websites using Roblox Luau,
+                Python, JavaScript, HTML, CSS and GSAP.
+            </p>
+
+            <div class="buttons">
+
+                <a class="btn primary" href="#projects">
+                    View My Work ↓
+                </a>
+
+                <a class="btn secondary" href="#contact">
+                    Let's Work Together
+                </a>
+
+            </div>
+
+            <div class="scroll-hint">
+                Scroll to explore
+            </div>
+
         </div>
-    </nav>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <div class="eyebrow">ROBLOX GAME DEVELOPER · PRESTON</div>
-                <h1>Building Roblox games<br>that feel <span class="gradient">alive.</span></h1>
-                <p>
-                    I’m Preston, a 16-year-old Roblox game developer focused on creating
-                    fun, polished experiences with gameplay, scripting, UI and
-                    strong presentation. I’m always building, learning and improving.
-                </p>
+        <div class="orb"></div>
 
-                <div class="buttons">
-                    <a class="btn primary" href="#projects">View My Game ↓</a>
-                    <a class="btn secondary" href="#contact">Let's Work Together</a>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                01 — About
+            </div>
+
+            <h2 class="section-title">
+                Developer with<br>
+                a builder mindset.
+            </h2>
+
+            <div class="about-box">
+
+                <div class="card">
+
+                    <p>
+                        I'm Preston, a developer who enjoys turning ideas into
+                        real, functional experiences. My main focus is Roblox
+                        development, where I work with Luau to create gameplay
+                        systems, mechanics, UI and complete game experiences.
+                    </p>
+
+                    <p>
+                        I've also scripted and sold games and systems to other
+                        developers, giving me experience working on projects
+                        outside of my own games.
+                    </p>
+
+                    <p>
+                        Outside of Roblox, I build websites and interactive
+                        experiences using HTML, CSS, JavaScript, GSAP and Python.
+                    </p>
+
                 </div>
 
-                <div class="scroll-hint">Scroll to explore</div>
-            </div>
-            <div class="orb"></div>
-        </section>
 
-        <section id="about">
-            <div class="container">
-                <div class="eyebrow">01 — About</div>
-                <h2 class="section-title">Developer with a<br>player mindset.</h2>
-                <div class="about-box">
-                    <div class="card">
-                        <p>
-                            I’m a 16-year-old Roblox developer who enjoys turning simple ideas
-                            into playable experiences. I care about making games
-                            easy to understand, fun to play and visually memorable.
-                        </p>
-                        <p>
-                            I’m currently growing my portfolio one game at a time, with a focus on
-                            gameplay systems, horror/obby experiences, UI and polished
-                            player interactions.
-                        </p>
+                <div class="card">
+
+                    <div class="stat">
+                        <span>Developer</span>
+                        <strong>Preston</strong>
                     </div>
 
-                    <div class="card">
-                        <div class="stat">
-                            <span>Developer</span>
-                            <strong>Preston</strong>
-                        </div>
-                        <div class="stat">
-                            <span>Engine</span>
-                            <strong>Roblox Studio</strong>
-                        </div>
-                        <div class="stat">
-                            <span>Scripting</span>
-                            <strong>Luau</strong>
-                        </div>
-                        <div class="stat">
-                            <span>Live Games</span>
-                            <strong>1</strong>
-                        </div>
-                        <div class="stat">
-                            <span>Total Visits</span>
-                            <strong>179K+</strong>
-                        </div>
+                    <div class="stat">
+                        <span>Primary Platform</span>
+                        <strong>Roblox</strong>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <section id="projects">
-            <div class="container">
-                <div class="eyebrow">02 — Selected Work</div>
-                <h2 class="section-title">Things I've built.</h2>
-                <p class="section-subtitle">
-                    A selection of Roblox projects and systems. Replace the
-                    placeholder details below with your live games and work.
-                </p>
-
-                <div class="grid">
-                    <article class="card project" style="padding:0; overflow:hidden;">
-                        <div style="position:relative; height:250px; background:linear-gradient(135deg,#171c28,#0b0e14);">
-                            <img
-                                id="game-banner"
-                                alt="My Teacher Started a Fire game banner"
-                                style="width:100%; height:100%; object-fit:cover; display:block;"
-                                src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27768%27 height=%27432%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%2310141b%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%238d96a8%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27 font-family=%27Arial%27 font-size=%2722%27%3ELoading Roblox game banner...%3C/text%3E%3C/svg%3E"
-                            >
-                            <div style="position:absolute; left:18px; bottom:16px; display:flex; align-items:center; gap:8px; padding:8px 11px; border-radius:999px; background:rgba(5,7,11,.82); border:1px solid rgba(255,255,255,.12); backdrop-filter:blur(10px); font-size:.78rem;">
-                                <span style="width:8px;height:8px;border-radius:50%;background:#35e58a;box-shadow:0 0 10px #35e58a;"></span>
-                                <span id="player-count">Checking players…</span>
-                            </div>
-                        </div>
-
-                        <div style="padding:28px;">
-                            <div class="project-number">LIVE GAME · 01</div>
-                            <h3>My Teacher Started a Fire 🔥</h3>
-                            <p>
-                                A Roblox horror obby where players must escape a school
-                                after their teacher starts a fire. Run through dangerous
-                                obstacles, survive scary surprises and make it to the ending.
-                            </p>
-                            <div class="tags">
-                                <span class="tag">Roblox</span>
-                                <span class="tag">Horror</span>
-                                <span class="tag">Obby</span>
-                                <span class="tag">Luau</span>
-                            </div>
-                            <div style="margin-top:22px;">
-                                <a class="btn primary" href="https://www.roblox.com/games/103835028267054/My-Teacher-Started-a-Fire" target="_blank">
-                                    Play Game ↗
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="card project">
-                        <div class="project-number">PORTFOLIO · 02</div>
-                        <h3>More Games Coming</h3>
-                        <p>
-                            This portfolio will grow as I release more Roblox
-                            experiences and experiment with new gameplay ideas,
-                            mechanics and systems.
-                        </p>
-                        <div class="tags">
-                            <span class="tag">Game Development</span>
-                            <span class="tag">Learning</span>
-                            <span class="tag">Building</span>
-                        </div>
-                    </article>
-                </div></div>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="container">
-                <div class="eyebrow">03 — Skills</div>
-                <h2 class="section-title">My toolbox.</h2>
-                <p class="section-subtitle">
-                    The technologies and areas I use to turn ideas into
-                    playable Roblox experiences.
-                </p>
-
-                <div class="skills">
-                    <div class="skill">
-                        <div class="icon">⌘</div>
+                    <div class="stat">
+                        <span>Game Scripting</span>
                         <strong>Luau</strong>
-                        <span>Gameplay scripting</span>
                     </div>
-                    <div class="skill">
-                        <div class="icon">◈</div>
-                        <strong>Roblox Studio</strong>
-                        <span>Game development</span>
+
+                    <div class="stat">
+                        <span>Web</span>
+                        <strong>HTML / CSS / JS</strong>
                     </div>
-                    <div class="skill">
-                        <div class="icon">▣</div>
-                        <strong>UI / UX</strong>
-                        <span>Player interfaces</span>
+
+                    <div class="stat">
+                        <span>Animation</span>
+                        <strong>GSAP</strong>
                     </div>
-                    <div class="skill">
-                        <div class="icon">✦</div>
-                        <strong>Animation</strong>
-                        <span>Tweening & effects</span>
+
+                    <div class="stat">
+                        <span>Programming</span>
+                        <strong>Python</strong>
                     </div>
-                    <div class="skill">
-                        <div class="icon">⚙</div>
-                        <strong>Systems</strong>
-                        <span>Game mechanics</span>
+
+                    <div class="stat">
+                        <span>Total Visits</span>
+                        <strong>179K+</strong>
                     </div>
-                    <div class="skill">
-                        <div class="icon">◉</div>
-                        <strong>Monetization</strong>
-                        <span>Developer products</span>
-                    </div>
-                    <div class="skill">
-                        <div class="icon">⌁</div>
-                        <strong>Optimization</strong>
-                        <span>Performance focused</span>
-                    </div>
-                    <div class="skill">
-                        <div class="icon">+</div>
-                        <strong>Problem Solving</strong>
-                        <span>Debugging & iteration</span>
-                    </div>
+
                 </div>
+
             </div>
-        </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="eyebrow">04 — Contact</div>
-                <h2 class="section-title">Have an idea?</h2>
-                <p class="section-subtitle">
-                    Want to talk about Roblox development, a collaboration or a game idea?
-                    You can reach me through email or X.
-                </p>
+        </div>
 
-                <div class="buttons" style="justify-content:center;">
-                    <a class="btn primary" href="https://x.com/twixpreston" target="_blank">
-                        X / Twitter ↗
-                    </a>
-                    <a class="btn secondary" href="mailto:pabsline4@gmail.com">
-                        Email Me ↗
-                    </a>
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                02 — Selected Work
+            </div>
+
+            <h2 class="section-title">
+                Things I've built.
+            </h2>
+
+            <p class="section-subtitle">
+                From Roblox games and scripting systems to interactive
+                websites and developer tools, these are some of the areas
+                I've worked in.
+            </p>
+
+
+            <div class="grid">
+
+
+                <!-- GAME -->
+
+                <article
+                    class="card project"
+                    style="padding:0; overflow:hidden;"
+                >
+
+                    <div
+                        style="
+                        position:relative;
+                        height:250px;
+                        background:linear-gradient(135deg,#171c28,#0b0e14);
+                        "
+                    >
+
+                        <img
+                            id="game-banner"
+                            alt="My Teacher Started a Fire game banner"
+                            style="
+                            width:100%;
+                            height:100%;
+                            object-fit:cover;
+                            display:block;
+                            "
+                            src="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27768%27 height=%27432%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%2310141b%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%238d96a8%27 text-anchor=%27middle%27 dominant-baseline=%27middle%27 font-family=%27Arial%27 font-size=%2722%27%3ELoading Roblox game banner...%3C/text%3E%3C/svg%3E"
+                        >
+
+                        <div
+                            style="
+                            position:absolute;
+                            left:18px;
+                            bottom:16px;
+                            display:flex;
+                            align-items:center;
+                            gap:8px;
+                            padding:8px 11px;
+                            border-radius:999px;
+                            background:rgba(5,7,11,.82);
+                            border:1px solid rgba(255,255,255,.12);
+                            backdrop-filter:blur(10px);
+                            font-size:.78rem;
+                            "
+                        >
+
+                            <span
+                                style="
+                                width:8px;
+                                height:8px;
+                                border-radius:50%;
+                                background:#35e58a;
+                                box-shadow:0 0 10px #35e58a;
+                                "
+                            ></span>
+
+                            <span id="player-count">
+                                Checking players…
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div style="padding:28px;">
+
+                        <div class="project-number">
+                            LIVE GAME · 01
+                        </div>
+
+                        <h3>
+                            My Teacher Started a Fire 🔥
+                        </h3>
+
+                        <p>
+                            A Roblox horror obby where players must escape
+                            a school after their teacher starts a fire.
+                            Run through dangerous obstacles, survive scary
+                            surprises and make it to the ending.
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">Roblox</span>
+                            <span class="tag">Luau</span>
+                            <span class="tag">Horror</span>
+                            <span class="tag">Obby</span>
+                            <span class="tag">UI</span>
+
+                        </div>
+
+                        <div style="margin-top:22px;">
+
+                            <a
+                                class="btn primary"
+                                href="https://www.roblox.com/games/103835028267054/My-Teacher-Started-a-Fire"
+                                target="_blank"
+                            >
+                                Play Game ↗
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SOLD DEVELOPMENT WORK -->
+
+                <article class="card project">
+
+                    <div class="project-number">
+                        DEVELOPMENT · 02
+                    </div>
+
+                    <h3>
+                        Developer Commissions
+                    </h3>
+
+                    <p>
+                        I've scripted Roblox games, gameplay systems and
+                        mechanics for other developers and have sold
+                        development work directly to clients.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">Luau</span>
+                        <span class="tag">Game Systems</span>
+                        <span class="tag">Scripting</span>
+                        <span class="tag">UI</span>
+                        <span class="tag">Optimization</span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WEB -->
+
+                <article class="card project">
+
+                    <div class="project-number">
+                        WEB DEVELOPMENT · 03
+                    </div>
+
+                    <h3>
+                        Interactive Websites
+                    </h3>
+
+                    <p>
+                        I build modern responsive websites with custom
+                        animations, smooth scrolling, interactive components
+                        and polished visual design.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">GSAP</span>
+                        <span class="tag">Lenis</span>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PYTHON -->
+
+                <article class="card project">
+
+                    <div class="project-number">
+                        PROGRAMMING · 04
+                    </div>
+
+                    <h3>
+                        Python Projects
+                    </h3>
+
+                    <p>
+                        I also use Python to build scripts, automation,
+                        utilities and developer-focused tools.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">Python</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">APIs</span>
+                        <span class="tag">Tools</span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                03 — Skills
+            </div>
+
+            <h2 class="section-title">
+                My toolbox.
+            </h2>
+
+            <p class="section-subtitle">
+                The languages, frameworks and tools I use to build games,
+                websites, systems and interactive experiences.
+            </p>
+
+
+            <div class="skills">
+
+                <div class="skill">
+                    <div class="icon">⌘</div>
+                    <strong>Luau</strong>
+                    <span>Roblox scripting</span>
                 </div>
+
+                <div class="skill">
+                    <div class="icon">🐍</div>
+                    <strong>Python</strong>
+                    <span>Automation & tools</span>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">◇</div>
+                    <strong>JavaScript</strong>
+                    <span>Interactive web</span>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">⌁</div>
+                    <strong>HTML</strong>
+                    <span>Web structure</span>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">▣</div>
+                    <strong>CSS</strong>
+                    <span>Responsive design</span>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">✦</div>
+                    <strong>GSAP</strong>
+                    <span>Web animation</span>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">◈</div>
+                    <strong>Roblox Studio</strong>
+                    <span>Game development</span>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">⚙</div>
+                    <strong>Game Systems</strong>
+                    <span>Mechanics & gameplay</span>
+                </div>
+
             </div>
-        </section>
-    </main>
 
-    <footer>
-        © 2026 Preston · Roblox Game Developer
-    </footer>
+        </div>
 
-    <script>
-        // Floating particles
-        const particles = document.getElementById("particles");
+    </section>
 
-        for (let i = 0; i < 65; i++) {
-            const p = document.createElement("div");
-            p.className = "particle";
-            p.style.left = Math.random() * 100 + "%";
-            p.style.top = Math.random() * 100 + "%";
-            p.style.opacity = Math.random() * .5;
-            particles.appendChild(p);
 
-            gsap.to(p, {
-                y: -30 - Math.random() * 80,
-                x: -20 + Math.random() * 40,
-                opacity: .05 + Math.random() * .45,
-                duration: 2 + Math.random() * 4,
-                repeat: -1,
-                yoyo: true,
-                ease: "sine.inOut",
-                delay: Math.random() * 3
-            });
-        }
+    <!-- EXPERIENCE -->
 
-        // Smooth scrolling
-        const lenis = new Lenis();
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                04 — Experience
+            </div>
+
+            <h2 class="section-title">
+                More than just<br>
+                personal projects.
+            </h2>
+
+            <p class="section-subtitle">
+                I've worked on projects for myself and for other developers,
+                giving me experience building things that need to actually
+                work, perform and ship.
+            </p>
+
+
+            <div class="experience-grid">
+
+                <div class="experience">
+
+                    <strong>
+                        Game Development
+                    </strong>
+
+                    <span>
+                        Building complete Roblox experiences,
+                        gameplay mechanics, systems and player
+                        interactions.
+                    </span>
+
+                </div>
+
+
+                <div class="experience">
+
+                    <strong>
+                        Client Work
+                    </strong>
+
+                    <span>
+                        Scripting and selling games and development
+                        systems directly to other developers.
+                    </span>
+
+                </div>
+
+
+                <div class="experience">
+
+                    <strong>
+                        Web Development
+                    </strong>
+
+                    <span>
+                        Creating responsive websites with HTML,
+                        CSS, JavaScript, GSAP and modern UI animation.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="about-box" style="margin-top:20px;">
+
+                <div class="card">
+
+                    <h3>
+                        What I enjoy building
+                    </h3>
+
+                    <p>
+                        Game mechanics, horror and obby experiences,
+                        interactive interfaces, automation, websites,
+                        developer tools and systems that make projects
+                        easier to build.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="stat">
+                        <span>Roblox Development</span>
+                        <strong>✓</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Web Development</span>
+                        <strong>✓</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Python</span>
+                        <strong>✓</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>Client Development</span>
+                        <strong>✓</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact" class="contact">
+
+        <div class="container">
+
+            <div class="eyebrow">
+                05 — Contact
+            </div>
+
+            <h2 class="section-title">
+                Have an idea?
+            </h2>
+
+            <p class="section-subtitle">
+                Looking for a Roblox developer, a website or help bringing
+                a game idea to life? I'm open to development work,
+                collaborations and new projects.
+            </p>
+
+            <div
+                class="buttons"
+                style="justify-content:center;"
+            >
+
+                <a
+                    class="btn primary"
+                    href="https://x.com/twixpreston"
+                    target="_blank"
+                >
+                    X / Twitter ↗
+                </a>
+
+                <a
+                    class="btn secondary"
+                    href="mailto:pabsline4@gmail.com"
+                >
+                    Email Me ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 Preston · Game & Web Developer
+</footer>
+
+
+<script>
+
+    /* =========================
+       FLOATING PARTICLES
+    ========================= */
+
+    const particles = document.getElementById("particles");
+
+    for (let i = 0; i < 65; i++) {
+
+        const p = document.createElement("div");
+
+        p.className = "particle";
+
+        p.style.left = Math.random() * 100 + "%";
+        p.style.top = Math.random() * 100 + "%";
+        p.style.opacity = Math.random() * .5;
+
+        particles.appendChild(p);
+
+        gsap.to(p, {
+
+            y: -30 - Math.random() * 80,
+
+            x: -20 + Math.random() * 40,
+
+            opacity: .05 + Math.random() * .45,
+
+            duration: 2 + Math.random() * 4,
+
+            repeat: -1,
+
+            yoyo: true,
+
+            ease: "sine.inOut",
+
+            delay: Math.random() * 3
+
+        });
+
+    }
+
+
+    /* =========================
+       LENIS SMOOTH SCROLL
+    ========================= */
+
+    const lenis = new Lenis();
+
+    function raf(time) {
+
+        lenis.raf(time);
+
         requestAnimationFrame(raf);
 
-        gsap.registerPlugin(ScrollTrigger);
+    }
 
-        // Hero entrance
-        gsap.from(".eyebrow", {
-            y: 25,
-            opacity: 0,
-            duration: .8,
-            ease: "power3.out"
-        });
+    requestAnimationFrame(raf);
 
-        gsap.from("h1", {
-            y: 55,
-            opacity: 0,
-            duration: 1,
-            delay: .1,
-            ease: "power3.out"
-        });
 
-        gsap.from(".hero p, .hero .buttons, .scroll-hint", {
-            y: 25,
-            opacity: 0,
-            duration: .8,
-            delay: .35,
-            stagger: .12,
-            ease: "power3.out"
-        });
+    gsap.registerPlugin(ScrollTrigger);
 
-        // Section reveals
-        gsap.utils.toArray("section:not(.hero) .section-title").forEach(title => {
+
+    /* =========================
+       HERO ANIMATION
+    ========================= */
+
+    gsap.from(".hero .eyebrow", {
+
+        y: 25,
+
+        opacity: 0,
+
+        duration: .8,
+
+        ease: "power3.out"
+
+    });
+
+
+    gsap.from("h1", {
+
+        y: 55,
+
+        opacity: 0,
+
+        duration: 1,
+
+        delay: .1,
+
+        ease: "power3.out"
+
+    });
+
+
+    gsap.from(".hero p, .hero .buttons, .scroll-hint", {
+
+        y: 25,
+
+        opacity: 0,
+
+        duration: .8,
+
+        delay: .35,
+
+        stagger: .12,
+
+        ease: "power3.out"
+
+    });
+
+
+    /* =========================
+       SECTION REVEALS
+    ========================= */
+
+    gsap.utils
+        .toArray("section:not(.hero) .section-title")
+        .forEach(title => {
+
             gsap.from(title, {
+
                 y: 50,
+
                 opacity: 0,
+
                 duration: .8,
+
                 scrollTrigger: {
+
                     trigger: title,
+
                     start: "top 82%",
-                    toggleActions: "play none none reverse"
+
+                    toggleActions:
+                        "play none none reverse"
+
                 }
+
             });
+
         });
 
-        gsap.utils.toArray(".card, .skill").forEach((item, i) => {
+
+    gsap.utils
+        .toArray(".card, .skill, .experience")
+        .forEach((item, i) => {
+
             gsap.from(item, {
+
                 y: 45,
+
                 opacity: 0,
+
                 duration: .7,
+
                 delay: (i % 4) * .08,
+
                 ease: "power3.out",
+
                 scrollTrigger: {
+
                     trigger: item,
+
                     start: "top 88%",
-                    toggleActions: "play none none reverse"
+
+                    toggleActions:
+                        "play none none reverse"
+
                 }
+
             });
+
         });
 
-        // Live Roblox game banner + player count
-        // Place ID: 103835028267054
-        const PLACE_ID = "103835028267054";
 
-        async function loadRobloxGameData() {
-            const playerCount = document.getElementById("player-count");
-            const banner = document.getElementById("game-banner");
+    /* =========================
+       ROBLOX GAME DATA
+    ========================= */
 
-            try {
-                // Roblox gives us the universe ID from the place ID.
-                // This is more reliable for a normal Roblox game/place URL.
-                const placeResponse = await fetch(
-                    `https://games.roblox.com/v1/games/multiget-place-details?placeIds=${PLACE_ID}`
+    const PLACE_ID = "103835028267054";
+
+
+    async function loadRobloxGameData() {
+
+        const playerCount =
+            document.getElementById("player-count");
+
+        const banner =
+            document.getElementById("game-banner");
+
+
+        try {
+
+            const placeResponse = await fetch(
+
+                `https://games.roblox.com/v1/games/multiget-place-details?placeIds=${PLACE_ID}`
+
+            );
+
+
+            if (!placeResponse.ok) {
+
+                throw new Error(
+                    "Place lookup failed"
                 );
-                if (!placeResponse.ok) throw new Error("Place lookup failed");
 
-                const placeData = await placeResponse.json();
-                const place = placeData.data?.[0];
-
-                if (!place || !place.universeId) {
-                    throw new Error("Universe ID not found");
-                }
-
-                const universeId = place.universeId;
-
-                // Get live game stats.
-                const gameResponse = await fetch(
-                    `https://games.roblox.com/v1/games?universeIds=${universeId}`
-                );
-                if (!gameResponse.ok) throw new Error("Game stats lookup failed");
-
-                const gameData = await gameResponse.json();
-                const game = gameData.data && gameData.data[0];
-
-                if (game) {
-                    const players = Number(game.playing || 0);
-                    playerCount.textContent =
-                        `${players.toLocaleString()} ${players === 1 ? "player" : "players"} playing`;
-
-                    // Get the game's current Roblox thumbnail/banner.
-                    try {
-                        const thumbnailResponse = await fetch(
-                            `https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=${universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`
-                        );
-                        if (thumbnailResponse.ok) {
-                            const thumbnailData = await thumbnailResponse.json();
-                            const thumbnails = thumbnailData.data?.[0]?.thumbnails || [];
-                            const imageUrl =
-                                thumbnails.find(t => t.state === "Completed")?.imageUrl ||
-                                thumbnails[0]?.imageUrl;
-
-                            if (imageUrl) {
-                                banner.src = imageUrl;
-                                banner.style.display = "block";
-                            }
-                        }
-                    } catch (_) {
-                        // Keep the fallback image if the thumbnail request fails.
-                    }
-                }
-            } catch (error) {
-                playerCount.textContent = "Live player count unavailable";
             }
+
+
+            const placeData =
+                await placeResponse.json();
+
+            const place =
+                placeData.data?.[0];
+
+
+            if (!place || !place.universeId) {
+
+                throw new Error(
+                    "Universe ID not found"
+                );
+
+            }
+
+
+            const universeId =
+                place.universeId;
+
+
+            const gameResponse = await fetch(
+
+                `https://games.roblox.com/v1/games?universeIds=${universeId}`
+
+            );
+
+
+            if (!gameResponse.ok) {
+
+                throw new Error(
+                    "Game stats lookup failed"
+                );
+
+            }
+
+
+            const gameData =
+                await gameResponse.json();
+
+            const game =
+                gameData.data &&
+                gameData.data[0];
+
+
+            if (game) {
+
+                const players =
+                    Number(game.playing || 0);
+
+
+                playerCount.textContent =
+
+                    `${players.toLocaleString()} ${
+                        players === 1
+                            ? "player"
+                            : "players"
+                    } playing`;
+
+
+                try {
+
+                    const thumbnailResponse =
+                        await fetch(
+
+                            `https://thumbnails.roblox.com/v1/games/multiget/thumbnails?universeIds=${universeId}&countPerUniverse=1&defaults=true&size=768x432&format=Png&isCircular=false`
+
+                        );
+
+
+                    if (thumbnailResponse.ok) {
+
+                        const thumbnailData =
+                            await thumbnailResponse.json();
+
+
+                        const thumbnails =
+                            thumbnailData
+                                .data?.[0]
+                                ?.thumbnails || [];
+
+
+                        const imageUrl =
+
+                            thumbnails.find(
+                                t =>
+                                    t.state ===
+                                    "Completed"
+                            )?.imageUrl
+
+                            ||
+
+                            thumbnails[0]?.imageUrl;
+
+
+                        if (imageUrl) {
+
+                            banner.src =
+                                imageUrl;
+
+                            banner.style.display =
+                                "block";
+
+                        }
+
+                    }
+
+                } catch (_) {
+
+                    // Keep fallback banner.
+
+                }
+
+            }
+
+        } catch (error) {
+
+            playerCount.textContent =
+                "Live player count unavailable";
+
         }
 
-        loadRobloxGameData();
+    }
 
-        // Refresh the player count every 60 seconds.
-        setInterval(loadRobloxGameData, 60000);
 
-        // Parallax orb
-        gsap.to(".orb", {
-            y: 220,
-            scrollTrigger: {
-                trigger: "body",
-                start: "top top",
-                end: "bottom bottom",
-                scrub: 1
-            }
-        });
-    </script>
+    loadRobloxGameData();
+
+
+    setInterval(
+        loadRobloxGameData,
+        60000
+    );
+
+
+    /* =========================
+       ORB PARALLAX
+    ========================= */
+
+    gsap.to(".orb", {
+
+        y: 220,
+
+        scrollTrigger: {
+
+            trigger: "body",
+
+            start: "top top",
+
+            end: "bottom bottom",
+
+            scrub: 1
+
+        }
+
+    });
+
+</script>
+
 </body>
 </html>
